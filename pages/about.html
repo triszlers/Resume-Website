@@ -40,6 +40,10 @@
                 $('.closeBtn').click(function(){
                     $('.sidebar').removeClass('active');
                 });
+                //exit sidebar when page (not sidebar) is clicked
+                $('.about-content').click(function(){
+                    $('.sidebar').removeClass('active');
+                });
             });
         </script>
         <!--____________________________________________________________________________________-->
