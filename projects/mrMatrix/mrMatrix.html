@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">      <!--connect style file-->
+        <title>Mr. Matrix</title>
+        <h1 style = "color: purple;">Welcome to Mr. Matrix</h1> 
+        <h2>Select matrix dimensions and see functions below</h2>
+    </head>
+    <body>
+        <button onclick="dispButtons(); gen22()">2x2 Matrix</button>
+        <button onclick="dispButtons(); gen33()">3x3 Matrix</button>
+        <button onclick="dispButtons(); gen44()">4x4 Matrix</button>
+        <br><br>
+        <div class="matrix" id="2x2" style="display:none">
+            <table>
+                <tr>
+                    <td><input type="number" placeholder="1" class="number" id="n1"></input></td>
+                    <td><input type="number" placeholder="0" class="number" id="n2"></input></td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="0" class="number" id="n3"></input></td>
+                    <td><input type="number" placeholder="1" class="number" id="n4"></input></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="matrix" id="3x3" style="display:none">
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="matrix" id="4x4" style="display:none">
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+        <div id="funcButtons" style="display:none">
+            <button onclick="getTrace()">Get Trace</button>
+            <button onclick="getEigenvals()">Get Eigenvalues</button>
+            <button onclick="getEigenvecs()">Get Eigenvectors</button>
+        </div>
+        <div id="answers" style="display:none">
+            <p id="returnVal">See Answers here: </p>
+        </div>
+
+        <script>
+            function dispButtons(){
+                document.getElementById("2x2").style="display:none";
+                document.getElementById("3x3").style="display:none";
+                document.getElementById("4x4").style="display:none";
+
+                document.getElementById("funcButtons").style="display:block";
+            }
+            function gen22(){
+                document.getElementById("2x2").style="display:block";
+            }
+            function gen33(){
+                document.getElementById("3x3").style="display:block";
+            }
+            function gen44(){
+                document.getElementById("4x4").style="display:block";
+            }
+            function getTrace(){
+                var n1 = document.getElementById("n1").value;     
+                var n4 = document.getElementById("n4").value;
+                var trace = parseInt(n1) + parseInt(n4)
+                //document.write(trace);      //replaces whole page
+                //alert("Trace = "+trace)     //generates pop-up
+                document.getElementById("answers").style="display:block";
+                let html = document.getElementById("returnVal").innerHTML;
+                html.innerHTML = trace;
+                
+            }
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,21 @@
+*{
+    margin: 1;
+    padding: 0.5;
+}
+table{
+    border: 1px solid;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    font-size: 40px;
+}
+.number{
+    width: 3em;
+    height: 3em;
+    font-size: 40px;
+}
+.matrix{
+    background-color: rgb(175, 177, 175); 
+    height: 500px;
+    width: 500px;
+}

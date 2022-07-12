@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: -1px auto 0 auto;
+    padding: 1px 0 0 0;
+    /*box-sizing: border-box;*/
+    font-family: "Poppins", sans-serif;
+}
+/* _______________________________________________________________SIDEBAR SETTINGS START_______________________________________________________________ */
+.sidebar{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+}
+.sidebar.active{
+    left: 0;
+}
+.sidebar .menu{
+    width: 100%;
+    margin-top: 80px;
+}
+.sidebar .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+.sidebar .menu .item a{ /* link properties ('a' tag) */
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+.sidebar .menu .item a:hover:not(.is-active){ /* link properties when hovering */
+    background: #199de9;
+    transition: 0.3s ease;
+}
+.sidebar .menu .item a.is-active{ /* the page you're currently on remains lit */
+    background: #0782c9;
+}
+.sidebar .menu .item i{ /* change 'i' symbol properties */
+    margin-right: 15px;
+}
+.sidebar .menu .item a .dropdown{ /* dropdown properties */
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+.sidebar .menu .item .submenu{
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+}
+.sidebar .menu .item .submenu a{
+    padding-left: 80px;
+}
+.rotate{    /* rotates dropdown arrow (see js func) */
+    transform: rotate(90deg);
+}
+.closeBtn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+.menuBtn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+/* _______________________________________________________________SIDEBAR SETTINGS END_______________________________________________________________ */
+/* _______________________________________________________________INDEX SETTINGS START_______________________________________________________________ */
+.index{
+    min-height: 100vh;
+    background: url(images/ocean1_bg.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.index-content{
+    height: 100vh;
+    margin-top: 200px;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    padding: 50px;
+}
+.index-content h1{   /*main text formatting*/
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    text-align: center;
+    line-height: 80px;
+    text-shadow: 2px 2px #000000; 
+}
+@media (max-width: 900px){   /*Changes main text at certain widths, NOT changed by sidebar*/
+    h1{     /* .index-content h1{ */
+        font-size: 40px;
+        line-height: 60px;
+    }
+}
+/* _______________________________________________________________INDEX SETTINGS END_______________________________________________________________ */
+/* _______________________________________________________________ABOUT SETTINGS START_______________________________________________________________ */
+.about{
+    min-height: 100vh;
+    background: url(images/wood_bg.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about-content{
+    margin-top: 200px;
+    height: 100vh;
+    padding: 50px;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    
+}
+.about-content h1{   /*main text formatting*/
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    text-align: center;
+    line-height: 80px;
+    text-shadow: 2px 2px #000000; 
+}
+/* _______________________________________________________________ABOUT SETTINGS END_______________________________________________________________ */
+/* _______________________________________________________________CONTACT SETTINGS START_______________________________________________________________ */
+.contact{
+    min-height: 100vh;
+    background: url(images/bear_bg.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;    /*height of whole body page*/
+}
+.contact-title{
+    margin-top: 180px;
+    
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000000;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 45px;
+}
+.contact-title h1{
+    font-size: 40px;
+}
+.contact-title h2{
+    font-size: 25px;
+}
+form{
+    margin-top: 25px;
+    text-align: center;
+}
+.form-control{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+form .submit{
+    background: #0782c9;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+}
+form .submit:hover{
+    background-color: #199de9;
+    cursor: pointer;
+}
+::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+/* _______________________________________________________________CONTACT SETTINGS END_______________________________________________________________ */

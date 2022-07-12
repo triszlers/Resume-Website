@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> <!--english, left to right-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">      <!--connect style file-->
+        <link rel="stylesheet" href="transitions.css">      <!--connect style file-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!--font awesome libraries-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+        <title>Home - Tristan Hunt</title>
+    </head>
+    <body class="index">
+        <!--__________________________________TRANSITIONS________________________________________-->
+        <script src="main.js"></script>
+        <div class="transition transition-1 is-active"></div>
+        <!--_____________________________________________________________________________________-->
+        <!--__________________________________SIDEBAR START__________________________________-->
+        <div class="menuBtn"><i class="fas fa-bars"></i></div>         <!--menu button-->
+        <div class="sidebar">
+            <div class="closeBtn"><i class="fas fa-times"></i></div>        <!--close button-->
+            <div class="menu">
+                <div class="item"><a class="is-active" href="index.html"><i class="fas fa-home"></i>Home</a></div>  <!--home button-->
+                <div class="item">
+                    <a class="subBtn"><i class="fas fa-table"></i>Projects<i class="fas fa-angle-right dropdown"></i></a>  <!--projects button-->
+                    <div class="submenu"><a href="projects/mrMatrix/mrMatrix.html" class="sub-item">Mr. Matrix</a></div>
+                </div>
+                <div class="item"><a href="pages\about.html"><i class="fas fa-info-circle"></i>About</a></div>   <!--about button-->
+                <div class="item"><a href="pages\contact.html"><i class="fas fa-envelope"></i>Contact</a></div>  <!--contact button-->
+            </div>
+        </div>
+        <script type="text/javascript"> //JS Functions
+            $(document).ready(function(){ //jquery for submenu toggles
+                $('.subBtn').click(function(){
+                    $(this).next('.submenu').slideToggle();
+                    $(this).find('.dropdown').toggleClass('rotate');
+                });
+                $('.menuBtn').click(function(){
+                    $('.sidebar').addClass('active');
+                });
+                $('.closeBtn').click(function(){
+                    $('.sidebar').removeClass('active');
+                });
+            });
+        </script>
+        <!--__________________________________SIDEBAR END__________________________________-->
+        <!--__________________________________PAGE CONTENT START__________________________________-->
+        <section class="index-content">
+            <h1>Home</h1>
+        </section>
+        <!--__________________________________PAGE CONTENT END__________________________________-->
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mr. Matrix</title>
+        <h1 style = "color: purple;">Welcome to Mr. Matrix</h1> 
+        <h2>See functions below and select matrix dimensions</h2>
+        <style>
+            .myDiv{
+              border: 5px outset red;
+              background-color: lightblue;
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <button>2x2 Matrix</button><br><br>
+        <button onclick="gen33()">3x3 Matrix</button><br><br>
+        <button onclick="gen44()">4x4 Matrix</button>
+
+        <script>
+            function gen33(){
+                document.location.href="3x3matrix.html"
+            }
+            function gen44(){
+                document.location.href="4x4matrix.html"
+            }
+        </script>
+        <br><br><br><br><br><br><br><br>
+        <div class="myDiv">
+            <h2>2x2</h2>
+        </div>
+    </body>
+</html>
